@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+// first solution concept...not so great
+
+// function hideEmail(email) {
+//   if (email.match("@")){
+//     alert ("your email is now hidden\n" + "***********")
+//   } else {alert ("wrong input")}
+// }
+
+// hideEmail(prompt('Please enter your email address to make it hidden'))
+
+
+
+
+
+function hideEmail(email) {
+
+  if(email.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)){
+
+    alert ("your email is now hidden\n" + "***********")
+
+  } else {alert ("wrong input")}
+
+  }
+  hideEmail(prompt('Please enter your email address to make it hidden'))
+
+
+
+
+// testing other possible solutions
+
+//   function convert (emailAddress){
+//     for(let i = 0; i < emailAddress.length; i++){
+//       // let received = emailAddress[i];
+//       // console.log(received);
+//       // let hidden = emailAddress.replace(received, "*");
+//       alert(emailAddress.charAt(i));
+//     }
+// }
+
+// convert (prompt("enter mail address"))
+
+
+</script>
+
+</body>
+</html>

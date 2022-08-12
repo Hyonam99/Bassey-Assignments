@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    function Ussd (code){
+      const bank = {
+      "*737#": "Welcome to GT Bank",
+      "*565#": "Welcome to First Bank",
+      "*329#": "Welcome to FCMB",
+      "*223#": "Welcome to WEMA Bank",
+      }
+      alert (bank[code]);
+      let message = prompt (bank[code] + `
+      Choose one option
+      1. Airtime
+      2. Buy Data
+      3.Transfer`);
+
+      const generalActions = {
+      Airtime: {text: "1. Self\n2. Others",
+        self: "enter your phone number",
+                  others: "enter recepients phone number"},
+      Buydata:  { text: "1. Self\n2. Others",
+        self: "enter your phone number",
+                  others: "enter recepients phone number"},
+      Transfer:  {text: "1. Self\n2. Others",
+        self: "enter your account number",
+                  others: "enter recepients account number"},}
+
+      if (message == 1) {
+        console.log(generalActions.Airtime.text);
+      }else if (message == 2){
+        console.log(generalActions.Buydata.text);
+    }else {
+      return "wrong command"
+    } }
+
+   Ussd(prompt("Enter your Bank USSD code here"));
+      
+   </script>
+</body>
+</html>
